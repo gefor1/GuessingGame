@@ -3,6 +3,7 @@
 read -p "Guess how many files are in this directory!: " guess
 exact=`ls | wc -l`
 
+function guessing() {
 while [ "$guess" != $exact ]
 do
 
@@ -19,3 +20,5 @@ done
 
 echo "Congratulations! You guessed right!"
 exit 1;
+}
+guessing
